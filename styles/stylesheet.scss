@@ -265,10 +265,21 @@ main{
                     flex-direction: column;
                     background-color: $Dark-blue;
                     
-                    h3{
-                        font-size: .5em;
-                        padding: 1.3em 0 1em 2em;
+                    button{
+                        width: 80%;
+                        margin: auto;
+                        text-align: center;
+                        font-size: .7em;
+                        padding: 1em;
+                        border-radius: .4em;
+                        background-color: $Pale-Blue;
+                        
                     }
+                    button:hover{
+                        background-color: $Desaturated-blue;
+                        cursor: pointer;
+                    }
+                    
                 }
             }
             .card__design{

@@ -189,9 +189,18 @@ main .card #session7 {
     flex-direction: column;
     background-color: hsl(235, 46%, 20%);
   }
-  main .card .card__1 .card1__period h3 {
-    font-size: 0.5em;
-    padding: 1.3em 0 1em 2em;
+  main .card .card__1 .card1__period button {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-size: 0.7em;
+    padding: 1em;
+    border-radius: 0.4em;
+    background-color: hsl(236, 100%, 87%);
+  }
+  main .card .card__1 .card1__period button:hover {
+    background-color: hsl(235, 45%, 61%);
+    cursor: pointer;
   }
   main .card .card__design {
     grid-area: two;
