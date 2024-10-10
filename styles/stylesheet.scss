@@ -1,0 +1,366 @@
+$fontSize: 18px; 
+
+$Blue: hsl(246, 80%, 60%); 
+
+$Light-red-work: hsl(15, 100%, 70%);//2
+$Soft-blue-play: hsl(195, 74%, 62%);//3
+$Light-red-study: hsl(348, 100%, 68%);//4
+$Lime-green-exercise: hsl(145, 58%, 55%);//5
+$Violet-social: hsl(264, 64%, 52%);//6
+$Sof-orange-selfcare: hsl(43, 84%, 65%);//7
+
+// ### Neutral
+
+$Very-dark-blue: hsl(226, 43%, 10%);
+$Dark-blue: hsl(235, 46%, 20%);
+$Desaturated-blue: hsl(235, 45%, 61%);
+$Pale-Blue: hsl(236, 100%, 87%);
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('./fonts/Rubik-Regular.woff2');
+}
+body{
+    font : {
+        family: Rubik;
+        size: $fontSize;
+    }
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img,svg,canvas,video{
+    object-fit: contain;
+    width: 100%;
+    display: block;
+    height: auto;
+    border: none;
+
+}
+
+main{
+    background-color: $Very-dark-blue;
+    
+    color: white;
+    .card{
+        width: 95%;
+        max-width: 700px;
+        padding: 1em;
+        margin: auto;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: .2em;
+        padding: .4em;
+
+
+        .card__1{
+            border: 1px solid white;
+            padding: .3em;
+            border-radius: .6em;
+
+            // .item1{
+            //     border: 1px solid;
+            //     padding: 1em;
+            //     display: flex;
+            //     flex-direction: column;
+            //     background-color: $Dark-blue;
+            
+            
+            .card1__profile{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $Blue;
+                padding: 1em 0 2em 0;
+                border-radius: .5em;
+                gap: 1em;
+
+                 div > img{
+                    width: 50px;
+                    align-self: flex-start;
+
+                }
+                div{
+           
+                    h1{
+                        font-size: .8rem;
+                        opacity: 0.4;
+                    }
+                }
+                 
+            }
+
+            .card1__period{
+                display: flex;
+                gap: 1em;
+                justify-content: space-around;
+                padding: 1em 0;
+                background-color: $Dark-blue;
+
+
+                h3{
+                    font-size: .8em;
+                    opacity: .4;
+                }
+                .active{
+                    opacity: 100%;
+                }
+            }
+            
+
+         
+    }
+    .card__design{
+            
+        padding: 1.4em;
+        border: 2px solid white;
+        
+        #session2{
+            background-color: $Light-red-work;
+        }
+        .session{
+            background-color: red;
+            border-radius: .8em;  
+            position: relative;
+            .image{
+                z-index: 0;
+                position: relative;
+                left: 80%;
+                width:40px;
+   
+            }
+            .session__type{
+                position: relative;
+                padding: 1em;
+                display: flex;
+                flex-direction: column;
+                
+                border-radius: .7em .7em 0 0 ;  
+                background-color: $Dark-blue;
+                z-index: 99;
+
+                div{
+                   
+                    border-radius: 10px;
+                    display: flex;
+                   align-items: baseline;
+                    padding: .2em;
+                    justify-content: space-between;
+                    flex: 1;
+
+                    h4{
+                        font-size: .7em;
+                        padding: .5em 0 .5em .5em;
+                    }
+                    h5{
+                        font-size: 1.5em;
+                        font-family: 'Rubic';
+                        padding: .5em 0 .5em .2em;
+                    }
+                    
+                span{
+                    display: flex;
+                    align-items: center;
+                    justify-content: end;
+                
+                    
+                    font-size: .6em;
+                }
+
+                
+                }
+            }
+        }
+    }
+
+ 
+        #session3{
+            background-color: $Soft-blue-play;
+        }
+      
+
+    #session4{
+        background-color: $Light-red-study;
+    }
+    #session5{
+        background-color: $Lime-green-exercise;
+    }
+    #session6{
+        background-color: $Violet-social;
+    }
+    #session7{
+        background-color: $Sof-orange-selfcare;
+    }
+
+}
+
+
+}
+@media (min-width:601px){
+    main{
+        max-width: 100%;
+       padding: 3em;
+        height: 100%;
+        font-family: 'Courier New', Courier, monospace;
+        .card{
+            margin: 3em auto;
+            display: grid;
+            
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+        
+            gap: .5em;
+            grid-template-areas: 
+            
+            "one two three four"
+            "one five six seven"
+            
+            ;
+
+            
+            .card__1{
+                grid-area: one;
+                display: flex;
+                flex-direction: column;
+                border-radius: .4em;
+                
+
+                .card1__profile{
+                    display: flex;
+                    flex-direction: column;
+                    flex: 3;
+                    background-color: $Blue;
+                    border-radius: .4em;
+                    padding: .8em;
+
+
+                    div{
+                        align-self: self-start;
+
+                        img{
+                            width: 50px;
+                            margin-bottom:1em;
+                        }
+                        h1{
+                            font-size: .5em;
+                            font-weight: 300;
+                            opacity: .5;
+                            padding-bottom: .7em;
+                        }
+
+                        h2{
+                            font-size: 1.4em;
+                        }
+                    }
+                }
+
+                .card1__period{
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    background-color: $Dark-blue;
+                    
+                    h3{
+                        font-size: .5em;
+                        padding: 1.3em 0 1em 2em;
+                    }
+                }
+            }
+            .card__design{
+                grid-area: two;
+                position: relative;
+
+                #session2{
+                    background-color: $Light-red-work;
+                }
+                .session 
+                {
+                 border-radius: .3em;
+                
+                img{
+                    position: relative;
+                    width: 30px;
+                    right: 50%;
+                    
+                    
+                }
+                .session__type{
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: space-between;
+                    padding: .3em .3em .5em .6em;
+                    background-color: $Dark-blue;
+                    border-radius: .4em .4em 0 0 ;
+                    flex: 4;
+                }
+
+               .session__type .session__type__activity{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: .5em;
+                    align-items: baseline;
+
+                    h4{
+                        font-size: .6em;
+                    }
+                    span{
+                        font-size: .5em;
+                    }
+                }
+                 .session__type .session__type__duration{
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: .5em;
+
+                    h5{
+                        font-size: 1.1em;
+                        padding: .4em 0 .2em 0;
+                    }
+                    span{
+                        font-size: .5em;
+                    }
+                }
+            }
+            }
+            .card__3{
+                grid-area: three;
+                #session3{
+                    background-color: $Soft-blue-play;
+                }
+            }
+            .card__4{
+                grid-area: four;
+                #session4{
+                    background-color: $Light-red-study;
+                }
+            }
+            .card__5{
+                grid-area: five;
+                #session5{
+                    background-color:$Lime-green-exercise;
+                }
+            }
+            .card__6{
+                grid-area: six;
+                #session6{
+                    background-color: $Violet-social;
+                }
+            }
+            .card__7{
+                grid-area: seven;
+                #session7{
+                    background-color: $Sof-orange-selfcare;
+                }
+            }
+        }
+    
+     
+     }
+    }
+

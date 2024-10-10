@@ -1,0 +1,276 @@
+@font-face {
+  font-family: "Rubik";
+  src: url("./fonts/Rubik-Regular.woff2");
+}
+body {
+  font-family: Rubik;
+  font-size: 18px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img, svg, canvas, video {
+  object-fit: contain;
+  width: 100%;
+  display: block;
+  height: auto;
+  border: none;
+}
+
+main {
+  background-color: hsl(226, 43%, 10%);
+  color: white;
+}
+main .card {
+  width: 95%;
+  max-width: 700px;
+  padding: 1em;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 0.2em;
+  padding: 0.4em;
+}
+main .card .card__1 {
+  border: 1px solid white;
+  padding: 0.3em;
+  border-radius: 0.6em;
+}
+main .card .card__1 .card1__profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(246, 80%, 60%);
+  padding: 1em 0 2em 0;
+  border-radius: 0.5em;
+  gap: 1em;
+}
+main .card .card__1 .card1__profile div > img {
+  width: 50px;
+  align-self: flex-start;
+}
+main .card .card__1 .card1__profile div h1 {
+  font-size: 0.8rem;
+  opacity: 0.4;
+}
+main .card .card__1 .card1__period {
+  display: flex;
+  gap: 1em;
+  justify-content: space-around;
+  padding: 1em 0;
+  background-color: hsl(235, 46%, 20%);
+}
+main .card .card__1 .card1__period h3 {
+  font-size: 0.8em;
+  opacity: 0.4;
+}
+main .card .card__1 .card1__period .active {
+  opacity: 100%;
+}
+main .card .card__design {
+  padding: 1.4em;
+  border: 2px solid white;
+}
+main .card .card__design #session2 {
+  background-color: hsl(15, 100%, 70%);
+}
+main .card .card__design .session {
+  background-color: red;
+  border-radius: 0.8em;
+  position: relative;
+}
+main .card .card__design .session .image {
+  z-index: 0;
+  position: relative;
+  left: 80%;
+  width: 40px;
+}
+main .card .card__design .session .session__type {
+  position: relative;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.7em 0.7em 0 0;
+  background-color: hsl(235, 46%, 20%);
+  z-index: 99;
+}
+main .card .card__design .session .session__type div {
+  border-radius: 10px;
+  display: flex;
+  align-items: baseline;
+  padding: 0.2em;
+  justify-content: space-between;
+  flex: 1;
+}
+main .card .card__design .session .session__type div h4 {
+  font-size: 0.7em;
+  padding: 0.5em 0 0.5em 0.5em;
+}
+main .card .card__design .session .session__type div h5 {
+  font-size: 1.5em;
+  font-family: "Rubic";
+  padding: 0.5em 0 0.5em 0.2em;
+}
+main .card .card__design .session .session__type div span {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-size: 0.6em;
+}
+main .card #session3 {
+  background-color: hsl(195, 74%, 62%);
+}
+main .card #session4 {
+  background-color: hsl(348, 100%, 68%);
+}
+main .card #session5 {
+  background-color: hsl(145, 58%, 55%);
+}
+main .card #session6 {
+  background-color: hsl(264, 64%, 52%);
+}
+main .card #session7 {
+  background-color: hsl(43, 84%, 65%);
+}
+
+@media (min-width: 601px) {
+  main {
+    max-width: 100%;
+    padding: 3em;
+    height: 100%;
+    font-family: "Courier New", Courier, monospace;
+  }
+  main .card {
+    margin: 3em auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 0.5em;
+    grid-template-areas: "one two three four" "one five six seven";
+  }
+  main .card .card__1 {
+    grid-area: one;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.4em;
+  }
+  main .card .card__1 .card1__profile {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 0.4em;
+    padding: 0.8em;
+  }
+  main .card .card__1 .card1__profile div {
+    align-self: self-start;
+  }
+  main .card .card__1 .card1__profile div img {
+    width: 50px;
+    margin-bottom: 1em;
+  }
+  main .card .card__1 .card1__profile div h1 {
+    font-size: 0.5em;
+    font-weight: 300;
+    opacity: 0.5;
+    padding-bottom: 0.7em;
+  }
+  main .card .card__1 .card1__profile div h2 {
+    font-size: 1.4em;
+  }
+  main .card .card__1 .card1__period {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(235, 46%, 20%);
+  }
+  main .card .card__1 .card1__period h3 {
+    font-size: 0.5em;
+    padding: 1.3em 0 1em 2em;
+  }
+  main .card .card__design {
+    grid-area: two;
+    position: relative;
+  }
+  main .card .card__design #session2 {
+    background-color: hsl(15, 100%, 70%);
+  }
+  main .card .card__design .session {
+    border-radius: 0.3em;
+  }
+  main .card .card__design .session img {
+    position: relative;
+    width: 30px;
+    right: 50%;
+  }
+  main .card .card__design .session .session__type {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    padding: 0.3em 0.3em 0.5em 0.6em;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 0.4em 0.4em 0 0;
+    flex: 4;
+  }
+  main .card .card__design .session .session__type .session__type__activity {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5em;
+    align-items: baseline;
+  }
+  main .card .card__design .session .session__type .session__type__activity h4 {
+    font-size: 0.6em;
+  }
+  main .card .card__design .session .session__type .session__type__activity span {
+    font-size: 0.5em;
+  }
+  main .card .card__design .session .session__type .session__type__duration {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+  }
+  main .card .card__design .session .session__type .session__type__duration h5 {
+    font-size: 1.1em;
+    padding: 0.4em 0 0.2em 0;
+  }
+  main .card .card__design .session .session__type .session__type__duration span {
+    font-size: 0.5em;
+  }
+  main .card .card__3 {
+    grid-area: three;
+  }
+  main .card .card__3 #session3 {
+    background-color: hsl(195, 74%, 62%);
+  }
+  main .card .card__4 {
+    grid-area: four;
+  }
+  main .card .card__4 #session4 {
+    background-color: hsl(348, 100%, 68%);
+  }
+  main .card .card__5 {
+    grid-area: five;
+  }
+  main .card .card__5 #session5 {
+    background-color: hsl(145, 58%, 55%);
+  }
+  main .card .card__6 {
+    grid-area: six;
+  }
+  main .card .card__6 #session6 {
+    background-color: hsl(264, 64%, 52%);
+  }
+  main .card .card__7 {
+    grid-area: seven;
+  }
+  main .card .card__7 #session7 {
+    background-color: hsl(43, 84%, 65%);
+  }
+}
+
+/*# sourceMappingURL=stylesheet.css.map */
