@@ -4,12 +4,36 @@ const day = document.querySelector('#daily');
 const week = document.querySelector('#weekly'); 
 const month = document.querySelector('#monthly'); 
 const card = document.querySelector('.card');
+const buttons = document.querySelectorAll('button');
+
+function addActiveClass(btn){
+
+    buttons.forEach(button => button.classList.remove('active'))
+    btn.classList.add('active');
+
+
+}
 
 document.addEventListener('DOMContentLoaded', fetchFile)
 
-day.addEventListener('click',() => loader(fetchedData,'daily'));
-week.addEventListener('click',()=>loader(fetchedData,'monthly'));
-month.addEventListener('click',()=>loader(fetchedData,'weekly'));
+
+
+day.addEventListener('click',() => 
+{
+    loader(fetchedData,'daily','today')
+    addActiveClass(day);
+
+});
+
+    week.addEventListener('click',()=>
+    {
+        addActiveClass(week);
+        loader(fetchedData,'weekly','week')});
+        
+        month.addEventListener('click',()=>{
+            addActiveClass(month);
+    
+            loader(fetchedData,'monthly','month')});
 
 let fetchedData = []; 
 
@@ -25,7 +49,9 @@ function fetchFile(){
 )
     .then(data=>
         fetchedData = data,
-        daily()
+        
+    ).then(fetchedData=>
+        loader(fetchedData, 'daily', 'today')
     )
    
     .catch(error=>console.error('Error Fetching File', error))
@@ -51,14 +77,17 @@ function monthly(){
     }
 }
 
-function loader(fetchedData,time){
+function loader(fetchedData,time,period){
     if(fetchedData && fetchedData.length > 0){
-
+       
         fetchedData.forEach((item,index) =>{
-            const cardIndex = index + 2
+            const cardIndex = index + 2;
+            const existingCard = document.querySelector(`.card__${cardIndex}`);
+
+   if(!existingCard){
 
         
-     return       card.insertAdjacentHTML('beforeend',`
+     card.insertAdjacentHTML('beforeend',`
             
  <div class="card-grid card__${cardIndex} card__design">
       <div class="session" id="session${cardIndex}">
@@ -73,13 +102,21 @@ function loader(fetchedData,time){
           </div>
           <div class="session__type__duration">
             <h5>${item.timeframes[time].current} hrs</h5>
-           <span>Last ${time} - ${item.timeframes[time].previous}hrs</span>
+<span> ${period === 'today' ? 'Today' : 'Last ' + period} - ${item.timeframes[time].previous} hrs</span>
           </div>
         </div>
       </div>
     </div>
             
             `);
+     }else{
+        const duration = existingCard.querySelector('.session__type__duration h5');
+        const previousSpan = existingCard.querySelector('.session__type__duration span');
+
+        duration.textContent = `${item.timeframes[time].current} hrs`;
+        previousSpan.textContent =` ${period === 'today' ? 'Today' : 'Last ' + period} - ${item.timeframes[time].previous} hrs`;
+
+     }
         });
     }
 }
