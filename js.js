@@ -52,7 +52,7 @@ function fetchFile(){
         fetchedData = data,
         
     ).then(fetchedData=>
-        loader(fetchedData, 'daily', 'today')
+        loader(fetchedData, 'weekly', 'week')
     )
    
     .catch(error=>console.error('Error Fetching File', error))
