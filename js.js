@@ -16,6 +16,7 @@ function addActiveClass(btn){
 
 document.addEventListener('DOMContentLoaded', fetchFile)
 
+addActiveClass(week);
 
 
 day.addEventListener('click',() => 
@@ -117,6 +118,9 @@ function loader(fetchedData,time,period){
         previousSpan.textContent =` ${period === 'today' ? 'Today' : 'Last ' + period} - ${item.timeframes[time].previous} hrs`;
 
      }
+     
+     
+
         });
     }
 }
