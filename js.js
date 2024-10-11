@@ -50,11 +50,10 @@ function fetchFile(){
     return response.json()
 }
 )
-    .then(data=>
+  .then(data=>{
         fetchedData = data,
-        
-    ).then(fetchedData=>
         loader(fetchedData, 'weekly', 'week')
+    }
     )
    
     .catch(error=>console.error('Error Fetching File', error))
