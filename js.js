@@ -17,7 +17,7 @@ function addActiveClass(btn){
 document.addEventListener('DOMContentLoaded', fetchFile)
 
 addActiveClass(week);
-
+loader(fetchedData,'daily','week')
 
 day.addEventListener('click',() => 
 {
