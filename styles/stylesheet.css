@@ -28,17 +28,13 @@ main {
 main .card {
   width: 95%;
   max-width: 700px;
-  padding: 1em;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  gap: 0.2em;
-  padding: 0.4em;
+  gap: 1em;
 }
 main .card .card__1 {
-  border: 1px solid white;
-  padding: 0.3em;
   border-radius: 0.6em;
 }
 main .card .card__1 .card1__profile {
@@ -48,7 +44,6 @@ main .card .card__1 .card1__profile {
   background-color: hsl(246, 80%, 60%);
   padding: 1em 0 2em 0;
   border-radius: 0.5em;
-  gap: 1em;
 }
 main .card .card__1 .card1__profile div > img {
   width: 50px;
@@ -60,33 +55,24 @@ main .card .card__1 .card1__profile div h1 {
 }
 main .card .card__1 .card1__period {
   display: flex;
-  gap: 1em;
   justify-content: space-around;
   padding: 1em 0;
   background-color: hsl(235, 46%, 20%);
 }
 main .card .card__1 .card1__period button {
-  width: 80%;
+  width: 90%;
   margin: auto;
   text-align: center;
   font-size: 0.7em;
   padding: 1em;
-  border-radius: 0.4em;
-  background-color: hsl(236, 100%, 87%);
-}
-main .card .card__1 .card1__period button:hover {
-  background-color: hsl(235, 45%, 61%);
+  border: none;
+  background-color: hsl(235, 46%, 20%);
+  color: gray;
   cursor: pointer;
-  opacity: 0.4;
 }
 main .card .card__1 .card1__period .active {
   opacity: 100%;
   color: white;
-  background-color: hsl(235, 45%, 61%);
-}
-main .card .card__design {
-  padding: 1.4em;
-  border: 2px solid white;
 }
 main .card .card__design #session2 {
   background-color: hsl(15, 100%, 70%);
@@ -166,7 +152,6 @@ main .card #session7 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    gap: 0.5em;
     grid-template-areas: "one two three four" "one five six seven";
   }
   main .card .card__1 {
@@ -225,7 +210,6 @@ main .card #session7 {
     display: flex;
     flex-direction: column;
     align-items: space-between;
-    padding: 0.3em 0.3em 0.5em 0.6em;
     background-color: hsl(235, 46%, 20%);
     border-radius: 0.4em 0.4em 0 0;
     flex: 4;
@@ -233,7 +217,6 @@ main .card #session7 {
   main .card .card__design .session .session__type .session__type__activity {
     display: flex;
     justify-content: space-between;
-    margin-top: 0.5em;
     align-items: baseline;
   }
   main .card .card__design .session .session__type .session__type__activity h4 {

@@ -48,19 +48,19 @@ main{
     .card{
         width: 95%;
         max-width: 700px;
-        padding: 1em;
+        
         margin: auto;
 
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        gap: .2em;
-        padding: .4em;
+        gap:1em;
+       
 
 
         .card__1{
-            border: 1px solid white;
-            padding: .3em;
+       
+        
             border-radius: .6em;
 
             // .item1{
@@ -78,7 +78,7 @@ main{
                 background-color: $Blue;
                 padding: 1em 0 2em 0;
                 border-radius: .5em;
-                gap: 1em;
+      
 
                  div > img{
                     width: 50px;
@@ -97,32 +97,30 @@ main{
 
             .card1__period{
                 display: flex;
-                gap: 1em;
+
                 justify-content: space-around;
                 padding: 1em 0;
                 background-color: $Dark-blue;
                 button{
-                    width: 80%;
+                    width: 90%;
                     margin: auto;
                     text-align: center;
                     font-size: .7em;
                     padding: 1em;
-                    border-radius: .4em;
-                    background-color: $Pale-Blue;
+                    border: none;
+                   background-color: $Dark-blue;
+                   color: gray;
+                   cursor: pointer;
                     
                 }
-                button:hover{
-                    background-color: $Desaturated-blue;
-                    cursor: pointer;
-                    opacity: .4;
-                }
+             
                 
 
                
                 .active{
                     opacity: 100%;
                     color: white;
-                    background-color: $Desaturated-blue;
+                   
                 }
             }
             
@@ -131,8 +129,8 @@ main{
     }
     .card__design{
             
-        padding: 1.4em;
-        border: 2px solid white;
+      
+     
         
         #session2{
             background-color: $Light-red-work;
@@ -232,7 +230,7 @@ main{
             grid-template-columns: repeat(4,1fr);
             grid-template-rows: auto;
         
-            gap: .5em;
+      
             grid-template-areas: 
             
             "one two three four"
@@ -310,7 +308,7 @@ main{
                     display: flex;
                     flex-direction: column;
                     align-items: space-between;
-                    padding: .3em .3em .5em .6em;
+                  
                     background-color: $Dark-blue;
                     border-radius: .4em .4em 0 0 ;
                     flex: 4;
@@ -319,7 +317,7 @@ main{
                .session__type .session__type__activity{
                     display: flex;
                     justify-content: space-between;
-                    margin-top: .5em;
+                   
                     align-items: baseline;
 
                     h4{
